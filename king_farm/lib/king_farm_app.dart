@@ -16,10 +16,9 @@ class KingFarmApp {
         title: "Map",
         pageWidget: new Icon(Icons.map),
         icon: new Icon(Icons.map)),
-        new AppPage(
-          title: "Contact",
-          pageWidget: new Icon(Icons.contact_mail),
-          icon: new Icon(Icons.contact_mail)
-        )
+    new AppPage(
+        title: "Contact",
+        pageWidget: new Icon(Icons.contact_mail),
+        icon: new Icon(Icons.contact_mail))
   ];
 }

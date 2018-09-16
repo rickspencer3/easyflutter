@@ -1,8 +1,14 @@
 import 'package:flutter/material.dart';
+import 'package:flutter/rendering.dart';
 
 import './king_farm_app.dart';
 
-void main() => runApp(new MyApp());
+void main() {
+  
+    debugPaintSizeEnabled = KingFarmApp.debugPaintSize;
+    
+   runApp(new MyApp());
+   }
 
 class MyApp extends StatelessWidget {
   // This widget is the root of your application.
@@ -15,7 +21,7 @@ class MyApp extends StatelessWidget {
             length: KingFarmApp.pages.length,
             child: new Scaffold(
                 appBar: new AppBar(
-                    title: new Text(KingFarmApp.title),
+                    title: KingFarmApp.appTitle,
                     bottom: new TabBar(
                         tabs: KingFarmApp.pages
                             .map((tab) =>

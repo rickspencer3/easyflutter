@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/rendering.dart';
 
-import './king_farm_app.dart';
+import './king_farm_widgets/king_farm_app.dart';
 
 void main() {
   
@@ -15,7 +15,7 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return new MaterialApp(
-        title: 'Flutter Demo',
+        title: KingFarmApp.title,
         theme: KingFarmApp.themeData,
         home: new DefaultTabController(
             length: KingFarmApp.pages.length,
@@ -28,6 +28,7 @@ class MyApp extends StatelessWidget {
                                 new Tab(text: tab.title, icon: tab.icon))
                             .toList())),
                 body: new TabBarView(
+                    physics: NeverScrollableScrollPhysics(),
                     children: KingFarmApp.pages
                         .map((page) => page.pageWidget)
                         .toList()))));
